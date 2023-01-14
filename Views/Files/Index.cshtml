@@ -1,0 +1,16 @@
+﻿@model string[]
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+       <ul>
+        @foreach (string item in Model)
+        {
+            <li>
+                <a asp-controller="Files" asp-action="Content" asp-route-id="@item">@item</a>
+            </li>
+        }
+    </ul>
+</div>
